@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider<ProductRepository>(
       create: (context) => ProductRepository(),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Bloc Test App',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
@@ -100,8 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           itemCount: state.products.length,
                           itemBuilder: (context, index) {
                             return ListTile(
-                              title: Text(state.products[index].id.toString()), //Text(context.watch<AllProductRepositoryState>().products[index].id.toString()),
-                              subtitle: Text(state.products[index].price.toString()), //Text(context.watch<AllProductRepositoryState>().products[index].price.toString()),
+                              title: Text(state.products[index].id.toString()),
+                              subtitle: Text(state.products[index].price.toString()),
                             );
                           },
                         ),
@@ -112,8 +112,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           itemCount: state.products.length,
                           itemBuilder: (context, index) {
                             return ListTile(
-                              title: Text(state.products[index].id.toString()), //Text(context.watch<AllProductRepositoryState>().products[index].id.toString()),
-                              subtitle: Text(state.products[index].price.toString()), //Text(context.watch<AllProductRepositoryState>().products[index].price.toString()),
+                              title: Text(state.products[index].id.toString()),
+                              subtitle: Text(state.products[index].price.toString()),
                             );
                           },
                         ),
@@ -124,8 +124,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           itemCount: state.products.length,
                           itemBuilder: (context, index) {
                             return ListTile(
-                              title: Text(state.products[index].id.toString()), //Text(context.watch<AllProductRepositoryState>().products[index].id.toString()),
-                              subtitle: Text(state.products[index].price.toString()), //Text(context.watch<AllProductRepositoryState>().products[index].price.toString()),
+                              title: Text(state.products[index].id.toString()),
+                              subtitle: Text(state.products[index].price.toString()),
                             );
                           },
                         ),
