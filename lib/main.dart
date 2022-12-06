@@ -18,7 +18,33 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const MyHomePage(),
+        home: const MyHomePageOne(),
+      ),
+    );
+    // return MaterialApp(
+    //   home: MyHomePage(),
+    // );
+  }
+}
+
+class MyHomePageOne extends StatefulWidget {
+  const MyHomePageOne({super.key});
+
+  @override
+  State<MyHomePageOne> createState() => _MyHomePageOneState();
+}
+
+class _MyHomePageOneState extends State<MyHomePageOne> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: TextButton(
+          child: const Text('Test'),
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyHomePage()));
+          },
+        ),
       ),
     );
   }
@@ -37,8 +63,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    super.initState();
     context.read<ProductRepository>().add(LoadEvent());
+    print(mounted);
+    super.initState();
   }
 
   @override
